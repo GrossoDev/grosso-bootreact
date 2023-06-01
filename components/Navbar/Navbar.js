@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Logo from '../Logo';
 import ThemeSelect from './ThemeSelect';
@@ -16,11 +15,11 @@ function Navlink({ title, url }) {
 function Navdropdown({ title, subItems }) {
   return (
     <li className="nav-item dropdown">
-      <a className="nav-link d-flex" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <span className="nav-link d-flex" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         <span className="flex-grow-1">{title}</span>
         <i className="bi bi-caret-down-fill ms-2 d-none d-lg-inline" />
         <i className="bi bi-caret-down-fill me-4 flex-shrink-1 d-inline d-lg-none" />
-      </a>
+      </span>
 
       <ul className="dropdown-menu">
         {
@@ -41,7 +40,7 @@ function Navbar({ themeSelect }) {
   return (
     <nav className="navbar navbar-expand-lg border-bottom">
       <div className="container py-0 py-lg-3">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           <Logo />
         </a>
 

@@ -31,9 +31,7 @@ function Navbar({ themeSelect }) {
           </ul>
           <div className="flex-shrink-1 m-3 m-sm-0">
             {
-              themeSelect
-                ? <ThemeSelect />
-                : null
+              themeSelect && <ThemeSelect />
             }
           </div>
         </div>

@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Inicio",
+    "url": "/",
+    "onHeader": true,
+    "onFooter": true
+  },
+  {
+    "title": "Proyectos Frontend",
+    "items": [
+      {
+        "title": "Buscaventas",
+        "url": "/Buscaventas"
+      }
+    ],
+    "onHeader": true,
+    "onFooter": true
+  }
+]

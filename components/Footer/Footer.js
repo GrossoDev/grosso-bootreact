@@ -19,7 +19,7 @@ function Footerlist({ title, subItems }) {
       {
         subItems.map((subItem) => (
           <p className="my-1">
-            <a className="text-reset text-decoration-none" href={subItem.url}>{subItem.title}</a>
+            <a className="text-reset text-decoration-none fw-light" href={subItem.url}>{subItem.title}</a>
           </p>
         ))
       }

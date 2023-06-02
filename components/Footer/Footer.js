@@ -18,7 +18,7 @@ function Footerlist({ title, subItems }) {
       <p className="fw-bold">{title}</p>
       {
         subItems.map((subItem) => (
-          <p className="my-1">
+          <p className="my-1" key={subItem.id}>
             <a className="text-reset text-decoration-none fw-light" href={subItem.url}>{subItem.title}</a>
           </p>
         ))
@@ -45,13 +45,13 @@ function Footer() {
             items.map((item) => {
               if (item.url) {
                 return (
-                  <Footeritem title={item.title} url={item.url} />
+                  <Footeritem title={item.title} url={item.url} key={item.id} />
                 );
               }
 
               if (item.items?.length > 0) {
                 return (
-                  <Footerlist title={item.title} subItems={item.items} />
+                  <Footerlist title={item.title} subItems={item.items} key={item.id} />
                 );
               }
 

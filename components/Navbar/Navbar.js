@@ -24,7 +24,7 @@ function Navdropdown({ title, subItems }) {
       <ul className="dropdown-menu me-4 me-lg-0">
         {
           subItems.map((subItem) => (
-            <li>
+            <li key={subItem.id}>
               <a className="dropdown-item" href={subItem.url}>{subItem.title}</a>
             </li>
           ))
@@ -53,11 +53,11 @@ function Navbar({ themeSelect }) {
             {
               items.map((item) => {
                 if (item.url) {
-                  return <Navlink title={item.title} url={item.url} />;
+                  return <Navlink title={item.title} url={item.url} key={item.id} />;
                 }
 
                 if (item.items?.length > 0) {
-                  return <Navdropdown title={item.title} subItems={item.items} />;
+                  return <Navdropdown title={item.title} subItems={item.items} key={item.id} />;
                 }
 
                 return null;

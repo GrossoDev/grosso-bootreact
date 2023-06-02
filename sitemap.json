@@ -1,14 +1,17 @@
 [
   {
+    "id": 0,
     "title": "Inicio",
     "url": "/",
     "onHeader": true,
     "onFooter": true
   },
   {
+    "id": 1,
     "title": "Proyectos Frontend",
     "items": [
       {
+        "id": 2,
         "title": "Buscaventas",
         "url": "/Buscaventas"
       }

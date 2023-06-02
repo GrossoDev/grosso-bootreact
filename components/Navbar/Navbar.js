@@ -21,7 +21,7 @@ function Navdropdown({ title, subItems }) {
         <i className="bi bi-caret-down-fill me-4 flex-shrink-1 d-inline d-lg-none" />
       </span>
 
-      <ul className="dropdown-menu">
+      <ul className="dropdown-menu me-4 me-lg-0">
         {
           subItems.map((subItem) => (
             <li>

@@ -1,25 +1,16 @@
 import { useState, useEffect } from 'react';
 
 function useTheme() {
-  const [theme, setTheme] = useState();
+  const [theme, setTheme] = useState(localStorage.getItem('theme'));
 
   useEffect(() => {
-    switch (theme) {
-      case 'light': {
-        document.documentElement.setAttribute('data-bs-theme', 'light');
-        break;
-      }
-      case 'dark': {
-        document.documentElement.setAttribute('data-bs-theme', 'dark');
-        break;
-      }
-      default: {
-        const actualTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-bs-theme', actualTheme);
-        break;
-      }
+    let displayTheme = theme;
+
+    if (theme !== 'dark' && theme !== 'light') {
+      displayTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
 
+    document.documentElement.setAttribute('data-bs-theme', displayTheme);
     localStorage.setItem('theme', theme);
   }, [theme]);
 

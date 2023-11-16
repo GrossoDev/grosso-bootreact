@@ -37,7 +37,7 @@ function Footer() {
           <div className="col-sm-2 my-3 my-sm-0">
             <a className="text-reset text-decoration-none" href="/">
               <div className="mb-2 d-flex d-sm-block justify-content-center"><Logo /></div>
-              <span className="text-muted d-flex d-sm-block justify-content-center">Grigori Rasputin</span>
+              <span className="text-muted d-flex d-sm-block justify-content-center">Giuliano Rosso</span>
             </a>
           </div>
 

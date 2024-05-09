@@ -1,5 +1,4 @@
 import React from 'react';
-import useTheme from '../../utils/useTheme';
 
 function ThemeIcon({ theme }) {
   switch (theme) {
@@ -12,9 +11,7 @@ function ThemeIcon({ theme }) {
   }
 }
 
-function ThemeSelect() {
-  const [theme, setTheme] = useTheme();
-
+function ThemeSelect({ theme, setTheme }) {
   return (
     <div className="dropdown">
       <button type="button" className="btn rounded-pill" data-bs-toggle="dropdown" aria-expanded="false">

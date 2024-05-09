@@ -34,7 +34,7 @@ function Navdropdown({ title, subItems }) {
   );
 }
 
-function Navbar({ themeSelect }) {
+function Navbar({ themeSelect, theme, setTheme }) {
   const items = Sitemap.filter((item) => item.onHeader);
 
   return (
@@ -67,7 +67,7 @@ function Navbar({ themeSelect }) {
 
           <div className="flex-shrink-1 m-3 m-sm-0">
             {
-              themeSelect && <ThemeSelect />
+              themeSelect && <ThemeSelect theme={theme} setTheme={setTheme} />
             }
           </div>
         </div>

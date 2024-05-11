@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 function useTheme() {
   const [theme, setTheme] = useState(localStorage.getItem('theme'));
+  const [actualTheme, setActualTheme] = useState("dark");
 
   useEffect(() => {
     let displayTheme = theme;
@@ -12,9 +13,10 @@ function useTheme() {
 
     document.documentElement.setAttribute('data-bs-theme', displayTheme);
     localStorage.setItem('theme', theme);
+    setActualTheme(displayTheme);
   }, [theme]);
 
-  return [theme, setTheme];
+  return {actualTheme, theme, setTheme};
 }
 
 export default useTheme;

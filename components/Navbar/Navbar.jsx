@@ -65,7 +65,7 @@ function Navbar({ themeSelect, theme, setTheme }) {
             }
           </ul>
 
-          <div className="flex-shrink-1 m-3 m-sm-0">
+          <div className="flex-shrink-1 m-3 m-lg-0">
             {
               themeSelect && <ThemeSelect theme={theme} setTheme={setTheme} />
             }

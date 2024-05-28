@@ -14,6 +14,11 @@
         "id": 2,
         "title": "Buscaventas",
         "url": "/Buscaventas"
+      },
+      {
+        "id": 3,
+        "title": "Rulero",
+        "url": "/rulero"
       }
     ],
     "onHeader": true,

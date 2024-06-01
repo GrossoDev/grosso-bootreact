@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import ThemeContext from '../../utils/ThemeContext';
 
 function ThemeIcon({ theme }) {
   switch (theme) {
@@ -11,7 +12,9 @@ function ThemeIcon({ theme }) {
   }
 }
 
-function ThemeSelect({ theme, setTheme }) {
+function ThemeSelector() {
+  const { theme, setTheme } = useContext(ThemeContext);
+
   return (
     <div className="dropdown">
       <button type="button" className="btn rounded-pill" data-bs-toggle="dropdown" aria-expanded="false">
@@ -42,4 +45,4 @@ function ThemeSelect({ theme, setTheme }) {
   );
 }
 
-export default ThemeSelect;
+export default ThemeSelector;

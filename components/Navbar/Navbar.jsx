@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../Logo';
-import ThemeSelect from './ThemeSelect';
+import ThemeSelector from './ThemeSelect';
 import Sitemap from '../../sitemap.json';
 import './Navbar.css';
 
@@ -34,7 +34,7 @@ function Navdropdown({ title, subItems }) {
   );
 }
 
-function Navbar({ themeSelect, theme, setTheme }) {
+function Navbar({ showThemeSelector }) {
   const items = Sitemap.filter((item) => item.onHeader);
 
   return (
@@ -66,9 +66,7 @@ function Navbar({ themeSelect, theme, setTheme }) {
           </ul>
 
           <div className="flex-shrink-1 m-3 m-lg-0">
-            {
-              themeSelect && <ThemeSelect theme={theme} setTheme={setTheme} />
-            }
+            { showThemeSelector ? <ThemeSelector /> : null }
           </div>
         </div>
       </div>

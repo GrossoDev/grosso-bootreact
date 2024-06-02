@@ -1,23 +1,27 @@
 [
   {
     "id": 0,
-    "title": "Inicio",
+    "titleEs": "Inicio",
+    "titleEn": "Home",
     "url": "/",
     "onHeader": true,
     "onFooter": true
   },
   {
     "id": 1,
-    "title": "Proyectos Frontend",
+    "titleEs": "Proyectos Frontend",
+    "titleEn": "Frontend projects",
     "items": [
       {
         "id": 2,
-        "title": "Buscaventas",
+        "titleEs": "Buscaventas",
+        "titleEn": "Buscaventas",
         "url": "/Buscaventas"
       },
       {
         "id": 3,
-        "title": "Rulero",
+        "titleEs": "Rulero",
+        "titleEn": "Rulero",
         "url": "/rulero"
       }
     ],

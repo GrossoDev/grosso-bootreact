@@ -12,14 +12,14 @@ function Footeritem({ title, url }) {
   );
 }
 
-function Footerlist({ title, subItems }) {
+function Footerlist({ title, subItems, english }) {
   return (
     <div className="col-sm my-3 my-sm-0 d-flex flex-column d-sm-block align-items-center">
       <p className="fw-bold">{title}</p>
       {
         subItems.map((subItem) => (
           <p className="my-1" key={subItem.id}>
-            <a className="text-reset text-decoration-none fw-light" href={subItem.url}>{subItem.title}</a>
+            <a className="text-reset text-decoration-none fw-light" href={subItem.url}>{english ? subItem.titleEn : subItem.titleEs}</a>
           </p>
         ))
       }
@@ -29,6 +29,7 @@ function Footerlist({ title, subItems }) {
 
 function Footer() {
   const items = Sitemap.filter((item) => item.onFooter);
+  const english = document.documentElement.lang === "en";
 
   return (
     <div className="d-flex border-top">
@@ -45,13 +46,13 @@ function Footer() {
             items.map((item) => {
               if (item.url) {
                 return (
-                  <Footeritem title={item.title} url={item.url} key={item.id} />
+                  <Footeritem title={english ? item.titleEn : item.titleEs} url={item.url} key={item.id} />
                 );
               }
 
               if (item.items?.length > 0) {
                 return (
-                  <Footerlist title={item.title} subItems={item.items} key={item.id} />
+                  <Footerlist title={english ? item.titleEn : item.titleEs} subItems={item.items} key={item.id} english={english} />
                 );
               }
 

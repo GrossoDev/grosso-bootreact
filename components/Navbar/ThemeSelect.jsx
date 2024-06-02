@@ -12,7 +12,7 @@ function ThemeIcon({ theme }) {
   }
 }
 
-function ThemeSelector() {
+function ThemeSelector({ english }) {
   const { theme, setTheme } = useContext(ThemeContext);
 
   return (

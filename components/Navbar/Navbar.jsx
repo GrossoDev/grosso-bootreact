@@ -40,7 +40,7 @@ function Navbar({ showThemeSelector }) {
   return (
     <nav className="navbar navbar-expand-lg border-bottom">
       <div className="container py-0 py-lg-3">
-        <a className="navbar-brand" href="/">
+        <a className="navbar-brand" href="/" aria-label="Go to Homepage">
           <Logo />
         </a>
 

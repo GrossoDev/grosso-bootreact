@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../Logo';
-import Sitemap from '../../sitemap.json';
+import useSitemap from '../../utils/useSitemap';
 
 function Footeritem({ title, url }) {
   return (
@@ -28,7 +28,11 @@ function Footerlist({ title, subItems, english }) {
 }
 
 function Footer() {
-  const items = Sitemap.filter((item) => item.onFooter);
+  const { map, error, loading } = useSitemap();
+
+  const sitemapLoaded = !(error || loading);
+  const items = sitemapLoaded ? map.filter((item) => item.onFooter) : [];
+
   const english = document.documentElement.lang === "en";
 
   return (

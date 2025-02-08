@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../Logo';
 import ThemeSelector from './ThemeSelect';
-import Sitemap from '../../sitemap.json';
+import useSitemap from '../../utils/useSitemap';
 import './Navbar.css';
 
 function Navlink({ title, url }) {
@@ -35,7 +35,11 @@ function Navdropdown({ title, subItems, english }) {
 }
 
 function Navbar({ showThemeSelector }) {
-  const items = Sitemap.filter((item) => item.onHeader);
+  const { map, error, loading } = useSitemap();
+
+  const sitemapLoaded = !(error || loading);
+  const items = sitemapLoaded ? map.filter((item) => item.onHeader) : [];
+
   const english = document.documentElement.lang === "en";
 
   return (

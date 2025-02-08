@@ -8,21 +8,30 @@
     "onFooter": true
   },
   {
-    "id": 1,
-    "titleEs": "Proyectos Frontend",
+    "id": 10,
+    "titleEs": "Proyectos frontend",
     "titleEn": "Frontend projects",
     "items": [
       {
-        "id": 2,
+        "id": 11,
         "titleEs": "Buscaventas",
         "titleEn": "Buscaventas",
         "url": "/Buscaventas"
-      },
+      }
+    ],
+    "onHeader": true,
+    "onFooter": true
+  },
+  {
+    "id": 20,
+    "titleEs": "Proyectos académicos",
+    "titleEn": "Academic projects",
+    "items": [
       {
-        "id": 3,
-        "titleEs": "Rulero",
-        "titleEn": "Rulero",
-        "url": "/rulero"
+        "id": 21,
+        "titleEs": "Simulador de interferencia de ondas",
+        "titleEn": "Wave interference simulator",
+        "url": "/em-wave-simulator"
       }
     ],
     "onHeader": true,
